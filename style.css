@@ -1,0 +1,97 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+}
+
+h1{
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+button{
+    width: 95%;
+    max-width: 220px;
+    padding: 6px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+/* BUS LAYOUT */
+#seatGrid{
+    display: grid;
+
+    /* Seat Seat Aisle Seat Seat */
+    grid-template-columns: auto auto 40px auto auto;
+
+    row-gap: 1px;
+    column-gap: 0px;
+
+    justify-content: center;
+    align-items: center;
+     margin-top:15px;
+}
+
+/* Center aisle */
+.aisle{
+    width: 40px;
+}
+
+/* Seat box */
+.seat{
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+/* Seat image */
+.seat-img{
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* Occupied = Red glow */
+.occupied{
+    box-shadow: 0 0 4px red;
+}
+
+/* Empty = Green glow */
+.empty{
+    box-shadow: 0 0 4px lime;
+}
+
+/* Belt indicator */
+.belt-circle{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+.belt-on{
+    background: dodgerblue;
+}
+
+.belt-off{
+    background: lightgray;
+}
