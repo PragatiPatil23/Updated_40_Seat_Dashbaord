@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // =====================
     function createSeats() {
 
-    for (let row = 0; row < 10; row++) {
+    for (let row = 0; row < 8; row++) {
 
-        for (let col = 0; col < 4; col++) {
+        for (let col = 0; col < 5; col++) {
 
-            let seatNo = row * 4 + col + 1;
+            let seatNo = row * 5 + col + 1;
 
             let div = document.createElement("div");
 
@@ -25,13 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             div.innerHTML = `
                 <img class="seat-img" src="seat_red_png.png">
+                <div class="seat-number">${seatNo}</div>
                 <div class="belt-circle belt-off"></div>
             `;
 
             seatGrid.appendChild(div);
 
-            /* Insert aisle after column 2 */
-            if (col == 1) {
+            /* Create aisle after the 3rd seat */
+            if (col == 2) {
 
                 let aisle = document.createElement("div");
                 aisle.className = "aisle";
